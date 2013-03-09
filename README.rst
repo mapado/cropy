@@ -3,6 +3,7 @@
 aptcrop : Python content based image crop
 =========================================
 Command line tool and module to crop an image to a specific resolution removing less important parts first.
+
 First started approch from this article but seems a bit complex and slow (http://research.microsoft.com/en-us/um/people/jiansun/papers/SalientDetection_CVPR07.pdf).
 
 aptcrop uses entropy information to identify slices of the image with less informations.
@@ -13,12 +14,16 @@ Usage
 
 Command line 
 python aptcrop-cmd.py -i [input image] -r [width] [height] -o [output name] -s [maxSteps]
+
 input image : location of the image to crop
+
 width, eight : dimensions of the resultant cropped image
+
 output name : name of the output image (default : original_name.width.eight.orginal_extension)
+
 maxSteps : number of iteration : greater means more precision but slower (default : 10)
 
-Important links
-===============
-- inspired from slycrop (php entropy based crop) : https://github.com/stojg/slycrop
+
+
+Inspired from slycrop (php entropy based crop) : https://github.com/stojg/slycrop
 
