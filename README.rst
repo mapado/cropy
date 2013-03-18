@@ -1,6 +1,6 @@
 .. -*- mode: rst -*-
 
-aptcrop : Python content based image crop
+apt-crop : Python content based image crop
 =========================================
 Command line tool and module to crop an image to a specific resolution removing less important parts first.
 
