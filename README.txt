@@ -10,9 +10,9 @@ aptcrop uses entropy information to identify slices of the image with less infor
 Usage
 -----
 
-To use with command line::
+To use with command line:
 
-  aptcrop-cmd.py -i [input image] -r [width] [height] -o [output name] -s [maxSteps]
+$ aptcrop-cmd.py -i [input image] -r [width] [height] -o [output name] -s [maxSteps]
 
 - input image : location of the image to crop
 - width, eight : dimensions of the resultant cropped image
