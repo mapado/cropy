@@ -4,7 +4,7 @@ import sys
 import os
 import Image
 
-from aptcrop import entropy_crop
+from cropy.entropy import entropy_crop
 from skimage import io
 from optparse import OptionParser
 
