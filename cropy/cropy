@@ -11,7 +11,7 @@ from optparse import OptionParser
 
 if __name__ == '__main__':
 
-    usage = "usage: %prog -i [input image] -r [width] [height] -o [output name] -s [maxSteps] \n",
+    usage = "usage: %prog -i [input image] -r [width] [height] -o [output name] -s [maxSteps]"\
     "where [width] and [height] are the requested crop size"
     parser = OptionParser(usage=usage)
     parser.add_option("-i", "--image", dest="input_image", help="Input Image File")
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
 
     if not options.input_image or not options.resolution:
-        print "Incorrect Usage; please use --help"
+        print "Incorrect Usage; please use -usage"
         sys.exit(2)
     if options.verbose:
         global verbose
