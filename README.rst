@@ -19,6 +19,7 @@ To use with command line::
 - output name : name of the output image (default : original_name.width.eight.orginal_extension)
 - maxSteps : number of iteration : greater means more precision but slower (default : 10)
 
+More info and examples on http://blog.mapado.com/cropy-how-to-crop-an-image-keeping-the-best-content/
 
 Possible upgrade
 ----------------
