@@ -4,7 +4,7 @@ Command line tool and module to crop an image to a specific resolution removing 
 
 First started with the approch of this publication but seems a bit complex and slow (http://research.microsoft.com/en-us/um/people/jiansun/papers/SalientDetection_CVPR07.pdf).
 
-aptcrop uses entropy information to identify slices of the image with less informations.
+cropy uses entropy information to identify slices of the image with less informations.
 
 
 Usage
