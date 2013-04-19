@@ -1,4 +1,4 @@
-apt-crop : Python content based image crop
+cropy : Python content based image crop
 =========================================
 Command line tool and module to crop an image to a specific resolution removing less important parts first.
 
@@ -12,7 +12,7 @@ Usage
 
 To use with command line::
 
-  aptcrop -i [input image] -r [width] [height] -o [output name] -s [maxSteps]
+  cropy -i [input image] -r [width] [height] -o [output name] -s [maxSteps]
 
 - input image : location of the image to crop
 - width, eight : dimensions of the resultant cropped image
