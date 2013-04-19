@@ -6,19 +6,19 @@ from os.path import join, dirname
 
 
 version = re.search("__version__ = '([^']+)'", open(
-    os.path.join(os.path.dirname(__file__), 'aptcrop', '__init__.py')
+    os.path.join(os.path.dirname(__file__), 'cropy', '__init__.py')
 ).read().strip()).group(1)
 
 
 setup(
-    name='aptcrop',
+    name='cropy',
     version=version,
     author='Jerry Nieuviarts',
     author_email='jerry@mapado.com',
-    url='https://github.com/mapado/apt-crop-content-based-image-crop',
+    url='https://github.com/mapado/cropy',
     packages=find_packages(),
-    install_requires=['numpy>=0.8.0', 'scipy>=0.11.0', 'scikit-image>=0.8.2', 'PIL>=1.1.7'],
-    scripts=['aptcrop/aptcrop'],
+    install_requires=['numpy', 'scipy', 'scikit-image', 'PIL'],
+    scripts=['cropy/cropy'],
     description='Command line tool and module to crop an image to a specific resolution removing less important parts first',
     long_description=open(join(dirname(__file__), 'README.rst')).read(),
     zip_safe=False,
