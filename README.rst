@@ -21,10 +21,20 @@ To use with command line::
 
 More info and examples on http://blog.mapado.com/cropy-how-to-crop-an-image-keeping-the-best-content/
 
+Installation
+------------
+You can install cropy using pip::
+
+    $ pip install cropy
+
+
+Note that cropy requires ``scikit-learn``, which itself is based on ``numpy`` and ``scipy`` and requires ``cython`` to compile.
+
 Possible upgrade
 ----------------
 - locate faces inside image to prevent removing
 - locate text on images to crop first
+
 
 Thanks
 ------
