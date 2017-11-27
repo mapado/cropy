@@ -17,7 +17,7 @@ setup(
     author_email='jerry@mapado.com',
     url='https://github.com/mapado/cropy',
     packages=find_packages(),
-    install_requires=['numpy', 'scipy', 'scikit-image', 'PIL'],
+    install_requires=['numpy', 'scipy', 'scikit-image', 'Pillow'],
     scripts=['cropy/cropy'],
     description='Command line tool and module to crop an image to a specific resolution removing less important parts first',
     long_description=open(join(dirname(__file__), 'README.rst')).read(),
