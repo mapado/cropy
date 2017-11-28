@@ -2,7 +2,7 @@
 
 import sys
 import os
-import Image
+from PIL import Image
 
 from cropy.entropy import entropy_crop
 from skimage import io
