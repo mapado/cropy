@@ -22,7 +22,7 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
 
     if not options.input_image or not options.resolution:
-        print "Incorrect Usage; please use -usage"
+        print("Incorrect Usage; please use -usage")
         sys.exit(2)
     if options.verbose:
         global verbose
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         input_image = options.input_image
         crop_width, crop_height = int(options.resolution[0]), int(options.resolution[1])
     except:
-        print "Incorrect Usage; please use --help"
+        print("Incorrect Usage; please use --help")
         sys.exit(2)
 
     if not options.output:
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     else:
         output = options.output
 
-    im = io.imread(input_image, as_grey=True)  # Load an image with float format
+    im = io.imread(input_image, as_gray=True)  # Load an image with float format
 
     x_offset, y_offset = entropy_crop(im, crop_width, crop_height, maxSteps)
     imfin = Image.open(input_image)
