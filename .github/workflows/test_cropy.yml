@@ -19,7 +19,7 @@ jobs:
       - name: Pip Install Cropy
         script: python -m pip install .
       - name: Run Test 1
-        script: |
+        run: |
                 mkdir test_results
                 cropy -i test-images/church.jpg -r 300 300 -o test_results/church_300x300.jpg -s 100
                 cropy -i test-images/3people.jpg -o test_results/3people.jpg -s 100
