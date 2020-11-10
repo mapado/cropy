@@ -18,8 +18,8 @@ jobs:
           architecture: x64
       - name: Pip Install Cropy
         run: |
-              python -m pip install numpy scipy scikit-image Pillow
-              python -m pip install .
+              pip install numpy scipy scikit-image Pillow
+              pip install .
       - name: Run Test 1
         run: |
                 mkdir test_results
