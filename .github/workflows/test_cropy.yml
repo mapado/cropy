@@ -1,0 +1,31 @@
+name: Cropy
+ 
+on: [push]
+
+jobs:
+  build:
+    name: Python ${{ matrix.python-version}} Ubuntu
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['2.x', '3.x']
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python version
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+      - name: Pip Install Cropy
+        script: python -m pip install .
+      - name: Run Test 1
+        script: |
+                mkdir test_results
+                cropy -i test-images/church.jpg -r 300 300 -o test_results/church_300x300.jpg -s 100
+                cropy -i test-images/3people.jpg -o test_results/3people.jpg -s 100
+      - name: Upload Results
+        uses: actions/upload-artifact@v1
+        with:
+          name: cropy_test_results
+          path: test_results
+    
