@@ -1,0 +1,33 @@
+name: Cropy
+ 
+on: [push]
+
+jobs:
+  build:
+    name: Python ${{ matrix.python-version}} Ubuntu
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['2.7', '3.8']
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python version
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+      - name: Pip Install Cropy
+        run: |
+              pip install numpy scipy scikit-image Pillow
+              pip install .
+      - name: Run Test 1
+        run: |
+                mkdir test_results
+                cropy -i test-images/church.jpg -r 300 300 -o test_results/church_300x300.jpg -s 100
+                cropy -i test-images/3people.jpg -r 700 300 -o test_results/3people.jpg -s 100
+      - name: Upload Results
+        uses: actions/upload-artifact@v1
+        with:
+          name: cropy_test_results
+          path: test_results
+    
